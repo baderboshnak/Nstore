@@ -709,7 +709,7 @@ mongoose
   .connect(MONGO_URI)
   .then(() => {
     console.log("✅ MongoDB connected");
-    app.listen(PORT, () => console.log(`🚀 API running at http://localhost:${PORT}`));
+    app.listen(PORT,"0.0.0.0", () => console.log(`🚀 API running at http://localhost:${PORT}`));
   })
   .catch((err) => {
     console.error("Mongo error:", err);
